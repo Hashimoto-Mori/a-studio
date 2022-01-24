@@ -214,7 +214,7 @@
 <script>
 import SongFilter from './SongFilter.vue';
 import SongListPagination from './SongListPagination.vue';
-import utils from './js/utils.js';
+import utils from '../js/utils.js';
 
 export default {
   name: 'MainSongList',
@@ -224,11 +224,11 @@ export default {
   },
   data() {
     return {
-      love_list: window.meumy.love_list,
+      love_list: window.gVariables.love_list,
       expand_list: [],
       page: 1,
       per_page: 10,
-      song_list_filtered: window.meumy.song_list,
+      song_list_filtered: window.gVariables.song_list,
     };
   },
   computed: {

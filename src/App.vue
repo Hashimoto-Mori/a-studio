@@ -41,7 +41,7 @@ export default {
       develop: false,
       if_debug: false,
       show_info: false,
-      debug_list: window.meumy.debug_list,
+      debug_list: window.gVariables.debug_list,
     };
   },
   methods: {

@@ -35,7 +35,7 @@
               />
               <img
                 v-show="play_mode == 'loopOnce'"
-                src="@/assets/ui/arrow-repeat-once.svg"
+                src="../assets/ui/arrow-repeat-once.svg"
               />
               <img
                 v-show="play_mode == 'shuffle'"
@@ -238,8 +238,8 @@ export default {
       play_progress: 0,
       load_progress: 0,
       duration: 0,
-      playlist: window.meumy.playlist,
-      love_list: window.meumy.love_list,
+      playlist: window.gVariables.playlist,
+      love_list: window.gVariables.love_list,
       current_song: 0,
     };
   },
