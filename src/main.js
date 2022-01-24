@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import utils from './js/utils.js';
 import data from './js/data.js';
+import VTooltip from 'v-tooltip';
 
 // 读取喜爱列表
 let love_list = utils.read_love_list();
@@ -36,4 +37,5 @@ window.gVariables = {
 };
 
 const app = createApp(App);
+app.use(VTooltip);
 app.mount('#app');
