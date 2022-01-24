@@ -214,7 +214,7 @@
 <script>
 import SongFilter from './SongFilter.vue';
 import SongListPagination from './SongListPagination.vue';
-import utils from '@/js/utils.js';
+import utils from './js/utils.js';
 
 export default {
   name: 'MainSongList',

@@ -206,7 +206,7 @@
 </template>
 
 <script>
-import utils from '@/js/utils.js';
+import utils from '../js/utils.js';
 import PopUpShare from './PopUp/Share.vue';
 import PopUpDetails from './PopUp/Details.vue';
 var audio = new Audio();

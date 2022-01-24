@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import MainSongList from './components/MainSongList.vue';
 import AudioPlayer from './components/AudioPlayer.vue';
 import Banner from './components/Banner.vue';
