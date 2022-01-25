@@ -6,7 +6,7 @@ let AVAILABLE_DAYS_LIMIT = 5;
 let parse = new Object();
 
 function get_song_data(callback) {
-  fetch('/static/recording database.csv', {
+  fetch('/static/recording_database.csv', {
     cache: 'no-cache',
   })
     .then((res) => {
@@ -16,7 +16,7 @@ function get_song_data(callback) {
     })
     .then((t) => {
       recording_csv_to_obj(t);
-      fetch('/static/song database.csv', {
+      fetch('/static/song_database.csv', {
         cache: 'no-cache',
       })
         .then((res) => {
