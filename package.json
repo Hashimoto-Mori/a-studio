@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
   "dependencies": {
     "bootstrap-icons-vue": "^0.8.0",
@@ -13,7 +15,12 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@originjs/vite-plugin-content": "^1.0.1",
     "@vitejs/plugin-vue": "^2.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.3.0",
+    "prettier": "2.5.1",
     "vite": "^2.7.2"
   }
 }
