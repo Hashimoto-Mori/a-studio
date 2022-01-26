@@ -153,10 +153,10 @@ export default {
   background-size: contain;
 }
 .pagination-go-first div {
-  background-image: url('~bootstrap-icons/icons/chevron-double-left.svg');
+  background-image: ('../assets/ui/chevron-double-left.svg');
 }
 .pagination-go-left div {
-  background-image: url('~bootstrap-icons/icons/chevron-left.svg');
+  background-image: ('../assets/ui/chevron-left.svg');
 }
 .pagination-current-page {
   min-width: 1rem;
@@ -166,10 +166,10 @@ export default {
   text-align: center;
 }
 .pagination-go-right div {
-  background-image: url('~bootstrap-icons/icons/chevron-right.svg');
+  background-image: ('../assets/ui/chevron-right.svg');
 }
 .pagination-go-last div {
-  background-image: url('~bootstrap-icons/icons/chevron-double-right.svg');
+  background-image: ('../assets/ui/chevron-double-right.svg');
 }
 
 @media all and (max-width: 799px) {

@@ -8,7 +8,7 @@
         v-bind:key="collection.name"
         v-on:click="replace_collection(collection.list)"
       >
-        <img src="~bootstrap-icons/icons/tag.svg" />
+        <b-icon-tag />
         <div>{{ collection.name }}</div>
       </div>
     </div>

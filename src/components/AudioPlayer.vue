@@ -14,10 +14,10 @@
         </div>
         <div class="c-info-op">
           <div class="shareButton otherButtons" v-on:click="toggle_share">
-            <img src="~bootstrap-icons/icons/share.svg" />
+            <b-icon-share/>
           </div>
           <div class="detailsButton otherButtons" v-on:click="toggle_details">
-            <img src="~bootstrap-icons/icons/three-dots.svg" />
+            <b-icon-three-dots/>
           </div>
         </div>
       </div>
@@ -29,18 +29,9 @@
               v-on:click="switch_play_mode"
               v-bind:title="play_mode_text"
             >
-              <img
-                v-show="play_mode == 'loop'"
-                src="~bootstrap-icons/icons/arrow-repeat.svg"
-              />
-              <img
-                v-show="play_mode == 'loopOnce'"
-                src="../assets/ui/arrow-repeat-once.svg"
-              />
-              <img
-                v-show="play_mode == 'shuffle'"
-                src="~bootstrap-icons/icons/shuffle.svg"
-              />
+              <b-icon-arrow-repeat v-show="play_mode == 'loop'"/>
+              <img v-show="play_mode=='loopOnce'" src="../assets/ui/arrow-repeat-once.svg" />
+              <b-icon-shuffle v-show="play_mode == 'shuffle'"/>
             </div>
             <div>
               <div
@@ -48,7 +39,7 @@
                 v-on:click="show_volume_bar = !show_volume_bar"
                 title="音量"
               >
-                <img src="~bootstrap-icons/icons/volume-up.svg" />
+                <b-icon-volume-up />
               </div>
               <transition name="fade">
                 <div class="c-volumeBar" v-show="show_volume_bar">
@@ -103,11 +94,8 @@
               v-on:click="toggle_loved"
               title="设为星标歌曲"
             >
-              <img v-show="!is_loved" src="~bootstrap-icons/icons/star.svg" />
-              <img
-                v-show="is_loved"
-                src="~bootstrap-icons/icons/star-fill.svg"
-              />
+              <b-icon-star v-show="!is_loved" />
+              <b-icon-star-fill v-show="is_loved" />
             </div>
             <div
               class="playlistButton otherButtons"
@@ -823,7 +811,7 @@ export default {
 .playlistButton-img {
   width: 1.3em;
   height: 1.3em;
-  background-image: url('~bootstrap-icons/icons/music-note-list.svg');
+  background-image: url('../assets/ui/music-note-list.svg');
   background-size: contain;
 }
 .playlistButton-corner {

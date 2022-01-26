@@ -7,5 +7,4 @@ export default defineConfig({
   build: {
     polyfillModulePreload: true,
   },
-  publicDir: 'public',
 });
