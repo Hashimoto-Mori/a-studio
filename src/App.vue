@@ -15,24 +15,24 @@
 </template>
 
 <script>
-import MainSongList from './components/MainSongList.vue';
-import AudioPlayer from './components/AudioPlayer.vue';
-import Banner from './components/Banner.vue';
-import ImportSongList from './components/ImportSongList.vue';
-import Footer from './components/Footer.vue';
-import Countdown from './components/Countdown.vue';
-import PopUpInfo from './components/PopUp/Info.vue';
-import song_data from './js/data.js';
-import utils from './js/utils.js';
+import MainSongList from "./components/MainSongList.vue";
+import AudioPlayer from "./components/AudioPlayer.vue";
+import Banner from "./components/Banner.vue";
+import ImportSongList from "./components/ImportSongList.vue";
+import Footer from "./components/Footer.vue";
+import Countdown from "./components/Countdown.vue";
+import PopUpInfo from "./components/PopUp/Info.vue";
+import song_data from "./js/data.js";
+import utils from "./js/utils.js";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     MainSongList,
     AudioPlayer,
     Banner,
     ImportSongList,
-    'v-footer': Footer,
+    "v-footer": Footer,
     Countdown,
     PopUpInfo,
   },
@@ -51,8 +51,8 @@ export default {
     init() {
       // 看看是不是开了后门
       const parsedUrl = new URL(window.location.href);
-      let backdoor_query = parsedUrl.searchParams.get('backdoor');
-      if (backdoor_query === 'ILOVEMEUMY') window.meumy.backdoor = true;
+      let backdoor_query = parsedUrl.searchParams.get("backdoor");
+      if (backdoor_query === "ILOVEMEUMY") window.meumy.backdoor = true;
       // 获取歌曲
       song_data.get_song_data(() => {
         // 加入保存的播放列表
@@ -63,8 +63,8 @@ export default {
         );
         // 如果有查询参数就把这首歌加入播放列表
         const parsedUrl = new URL(window.location.href);
-        let query = parsedUrl.searchParams.get('s');
-        if (query !== null && query !== '') {
+        let query = parsedUrl.searchParams.get("s");
+        if (query !== null && query !== "") {
           let song_idx = window.meumy.song_list.findIndex(
             (s) => s.have_audio && s.id === query
           );
@@ -74,14 +74,14 @@ export default {
               true
             );
           // 清空地址栏的查询参数
-          window.history.replaceState({}, '', window.location.pathname);
+          window.history.replaceState({}, "", window.location.pathname);
         }
         // 看看是不是首次打开
         if (utils.if_first_browse()) {
           // 首次打开就播放推荐曲
           this.show_info = true;
           // 光 逆光 我的偶像宣言 Fansa
-          let recommand_song_list = ['U00044', 'U01506', 'U00113', 'U01500'];
+          let recommand_song_list = ["U00044", "U01506", "U00113", "U01500"];
           let song_list = recommand_song_list.map((i) =>
             window.meumy.song_list.find((s) => s.id === i)
           );
@@ -120,7 +120,7 @@ body {
   text-align: center;
   margin-top: 0px;
   padding-bottom: 20rem;
-  background-image: url('assets/ui/banner_bg_dark.png');
+  background-image: url("assets/ui/banner_bg_dark.png");
   background-color: rgb(252, 252, 252);
   width: 100%;
   display: flex;
@@ -180,7 +180,7 @@ body {
   background-color: white;
   padding: 0.5rem;
 }
-.popper[x-placement^='top'] {
+.popper[x-placement^="top"] {
   border: 1px solid rgba(0, 0, 0, 0.274);
 }
 </style>
